@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+    background: #68a4ff;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  
+    
+   background: #fff url(images/clock.png);
+   background-size: cover;
+    border-radius: 50%;
+    border: 20px solid #fff;
+    box-shadow:inset 0 0 30px rgba(0, 0, 0, 0.1),
+                       0 20px 20px rgba(0, 0, 0, 0.2),
+                       0 0 04px rgba(255, 255, 255, 1);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(216, 167, 167);
+    border-radius: 50%;
+    z-index: 100000;
+    border: 2px solid #fff;
+}
+
+.clock .hour, .clock .min {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #5c1818;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.clock .min, .mn {
+    width: 190px;
+    height: 190px;
+}
+
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: rgb(58, 44, 255);
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.clock .sec, .sc {
+    width: 190px;
+    height: 190px;
+}
+
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #ff1c2f;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+.hr, .mn, .sc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
